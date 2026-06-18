@@ -34,7 +34,8 @@ bot = Assistant(
         "model_server": "http://localhost:11434/v1",
         "api_key": "EMPTY",
     },
-    function_list=["code_interpreter"],
+    # code_interpreter requires Docker — omitted for local runs without Docker
+    function_list=[],
     system_message=SYSTEM_MESSAGE,
 )
 
