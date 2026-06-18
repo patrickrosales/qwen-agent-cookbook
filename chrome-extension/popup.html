@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Summarizer Assistant</title>
+    <style>
+      body {
+        width: 500px;
+        height: 600px;
+        background-color: aliceblue;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 16px;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 1.1rem;
+        color: #333;
+      }
+
+      button {
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+        padding: 8px 20px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.2s;
+      }
+
+      button:hover {
+        background-color: #e0eeff;
+      }
+
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      pre {
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 90%;
+        height: 380px;
+        overflow: auto;
+        padding: 10px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Summarize Current Page</h2>
+      <button id="summarizeBtn">Summarize</button>
+      <pre id="output">Summary will appear here...</pre>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
